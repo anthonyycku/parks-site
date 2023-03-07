@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { MOBILE_WIDTH } from "../constants/constants";
 
 const UseWindowSizeHook = () => {
   const [isDesktop, setIsDesktop] = useState(true);
 
   const handleResize = () => {
-    setIsDesktop(window.innerWidth > 768);
+    setIsDesktop(window.innerWidth > MOBILE_WIDTH);
   }
 
   useEffect(() => {

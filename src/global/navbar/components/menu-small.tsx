@@ -38,16 +38,14 @@ const MenuSmall = () => {
         />
       </div>
 
-      {isOpen && (
-        <div
-          className={`menu ${isOpen ? 'menu-open ' : ''} absolute  w-32 bg-black rounded p-2 bg-opacity-90 flex flex-col space-y-4`}>
-          {navMenu.map(({ path, text }) => (
-            <Link to={path} key={text} onClick={handleMenuClick}>
-              <MenuButton text={text}/>
-            </Link>
-          ))}
-        </div>
-      )}
+      <div
+        className={`menu ${isOpen ? 'menu-open' : ''} absolute -left-2 w-32 bg-black rounded p-2 bg-opacity-90 flex flex-col space-y-4`}>
+        {navMenu.map(({ path, text, icon }) => (
+          <Link to={path} key={text} onClick={handleMenuClick}>
+            <MenuButton text={text} icon={icon}/>
+          </Link>
+        ))}
+      </div>
     </div>
   )
 };
