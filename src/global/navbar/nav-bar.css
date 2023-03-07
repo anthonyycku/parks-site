@@ -1,0 +1,9 @@
+.menu {
+    top: 0;
+    transform: translateY(-200%);
+    transition: transform 0.5s ease-out;
+}
+
+.menu-open {
+    transform: translateY(0%);
+}
