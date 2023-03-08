@@ -3,32 +3,15 @@ import { useInView } from "react-intersection-observer";
 import pawit1 from '../../../../../assets/pawit.jpg';
 import pawit2 from '../../../../../assets/pawit2.jpg';
 import CornerBorder from "../../../../../global/corner-border/corner-border";
+import { IntersectionObserver } from "../../../../../functions/observer/intersection-observer";
 
 const Intro = () => {
-  const { ref: refIntro, inView: inViewIntro } = useInView({
-    threshold: 1,
-    triggerOnce: true
-  });
-  const { ref: refIntroImage, inView: inViewIntroImage } = useInView({
-    threshold: 0.2,
-    triggerOnce: true
-  });
-  const { ref: refIntroText1, inView: inViewIntroText1 } = useInView({
-    threshold: 1,
-    triggerOnce: true
-  });
-  const { ref: refIntroText2, inView: inViewIntroText2 } = useInView({
-    threshold: 1,
-    triggerOnce: true
-  });
-  const { ref: refIntroText3, inView: inViewIntroText3 } = useInView({
-    threshold: 1,
-    triggerOnce: true
-  });
-  const { ref: refIntroImage2, inView: inViewIntroImage2 } = useInView({
-    threshold: 0.2,
-    triggerOnce: true
-  });
+  const [refIntro, inViewIntro] = IntersectionObserver(1);
+  const [refIntroImage, inViewIntroImage] = IntersectionObserver(0.2);
+  const [refIntroText1, inViewIntroText1] = IntersectionObserver(1);
+  const [refIntroText2, inViewIntroText2] = IntersectionObserver(1);
+  const [refIntroText3, inViewIntroText3] = IntersectionObserver(1);
+  const [refIntroImage2, inViewIntroImage2] = IntersectionObserver(0.2);
 
   const inViewOpacity = (isInView: boolean): string => {
     return `transition-opacity duration-1000 ${isInView ? 'opacity-1' : 'opacity-0'}`
@@ -37,8 +20,10 @@ const Intro = () => {
   return (
     <div className="relative flex flex-col w-full space-y-6">
 
-      <h1 ref={refIntro}
-          className={`text-center text-4xl md:text-6xl ${inViewOpacity(inViewIntro)}`}>
+      <h1
+        ref={refIntro}
+        className={`text-center text-4xl md:text-6xl ${inViewOpacity(inViewIntro)}`}
+      >
         Introduction
       </h1>
 

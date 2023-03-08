@@ -14,6 +14,10 @@ const Home = () => {
       </div>
 
       <ParallaxEvents/>
+
+      <div className="flex flex-col p-2">
+        <Intro/>
+      </div>
     </>
   )
 };

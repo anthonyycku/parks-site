@@ -2,17 +2,26 @@ import React from 'react';
 import { ParallaxBanner } from "react-scroll-parallax";
 import { BannerLayer } from "react-scroll-parallax/dist/components/ParallaxBanner/types";
 import { BsCalendarEvent } from "react-icons/all";
+import eventBackground from "../../../../assets/event-background.jpg";
 
 const ParallaxEvents = () => {
+  const background: BannerLayer = {
+    image: eventBackground,
+    translateY: [0, 50],
+    scale: [1.05, 1, 'easeOutCubic'],
+    shouldAlwaysCompleteAnimation: true
+  }
+
   const eventButton: BannerLayer = {
     translateY: [0, 30],
     scale: [1, 1.05, 'easeOutCubic'],
     shouldAlwaysCompleteAnimation: true,
     expanded: false,
     children: (
-      <div className="absolute inset-0 flex items-center justify-center flex-col">
+      <div className="absolute inset-0 -top-20 flex items-center justify-center flex-col">
         <button
-          className="p-2 rounded-xl text-4xl flex space-x-2 border border-1 border-white hover:text-white hover:bg-yellow-500 hover:bg-opacity-50 transition duration-500 ease-in-out"
+          type="button"
+          className="flex space-x-2 text-5xl px-6 py-3 mr-3 font-bold text-center uppercase align-middle transition-all bg-transparent border rounded-lg cursor-pointer border-white leading-pro ease-soft-in tracking-tight-soft shadow-soft-md bg-150 bg-x-25 hover:scale-105 active:opacity-85 hover:shadow-soft-xs text-white"
         >
           <BsCalendarEvent/>
           <p>EVENTS</p>
@@ -24,7 +33,7 @@ const ParallaxEvents = () => {
   return (
     <div className="h-[50vh]">
       <ParallaxBanner
-        layers={[eventButton]}
+        layers={[background, eventButton]}
         className="h-full"
       />
     </div>
