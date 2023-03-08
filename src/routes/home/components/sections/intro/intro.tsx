@@ -2,10 +2,11 @@ import React from 'react';
 import { useInView } from "react-intersection-observer";
 import pawit1 from '../../../../../assets/pawit.jpg';
 import pawit2 from '../../../../../assets/pawit2.jpg';
+import CornerBorder from "../../../../../global/corner-border/corner-border";
 
 const Intro = () => {
   const { ref: refIntro, inView: inViewIntro } = useInView({
-    threshold: 0.75,
+    threshold: 1,
     triggerOnce: true
   });
   const { ref: refIntroImage, inView: inViewIntroImage } = useInView({
@@ -13,15 +14,15 @@ const Intro = () => {
     triggerOnce: true
   });
   const { ref: refIntroText1, inView: inViewIntroText1 } = useInView({
-    threshold: 0.75,
+    threshold: 1,
     triggerOnce: true
   });
   const { ref: refIntroText2, inView: inViewIntroText2 } = useInView({
-    threshold: 0.75,
+    threshold: 1,
     triggerOnce: true
   });
   const { ref: refIntroText3, inView: inViewIntroText3 } = useInView({
-    threshold: 0.5,
+    threshold: 1,
     triggerOnce: true
   });
   const { ref: refIntroImage2, inView: inViewIntroImage2 } = useInView({
@@ -30,7 +31,7 @@ const Intro = () => {
   });
 
   const inViewOpacity = (isInView: boolean): string => {
-    return `transition-opacity duration-1000 opacity-${isInView ? '1' : '0'}`
+    return `transition-opacity duration-1000 ${isInView ? 'opacity-1' : 'opacity-0'}`
   }
 
   return (
@@ -41,8 +42,9 @@ const Intro = () => {
         Introduction
       </h1>
 
-      <div
-        className={`md:text-2xl md:flex md:space-x-2 md:w-2/3 md:border-black md:border-2 rounded-xl p-2 ${inViewOpacity(inViewIntroImage)}`}>
+      <CornerBorder
+        className={`md:text-2xl md:flex md:space-x-2 md:w-2/3 p-2 ${inViewOpacity(inViewIntroImage)}`}
+      >
         <div className={`flex justify-center md:min-w-[200px] md:max-h-[200px] ${inViewOpacity(inViewIntroImage)}`}
              ref={refIntroImage}>
           <img src={pawit1} width="auto" height="auto"/>
@@ -63,9 +65,9 @@ const Intro = () => {
             in.
           </p>
         </span>
-      </div>
+      </CornerBorder>
 
-      <div
+      <CornerBorder
         className={`md:text-2xl md:flex md:space-x-2 md:w-2/3 md:self-end md:border-black md:border-2 rounded-xl p-2 ${inViewOpacity(inViewIntroText3)}`}>
         <span>
           <p ref={refIntroText3} className={`${inViewOpacity(inViewIntroText3)}`}>
@@ -82,7 +84,7 @@ const Intro = () => {
              ref={refIntroImage2}>
           <img src={pawit2} width="auto" height="auto"/>
         </div>
-      </div>
+      </CornerBorder>
 
     </div>
   )
