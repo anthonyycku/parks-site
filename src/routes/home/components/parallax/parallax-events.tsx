@@ -21,7 +21,7 @@ const ParallaxEvents = () => {
       <div className="absolute inset-0 -top-20 flex items-center justify-center flex-col">
         <button
           type="button"
-          className="flex space-x-2 text-5xl px-6 py-3 mr-3 font-bold text-center uppercase align-middle transition-all bg-transparent border rounded-lg cursor-pointer border-white leading-pro ease-soft-in tracking-tight-soft shadow-soft-md bg-150 bg-x-25 hover:scale-105 active:opacity-85 hover:shadow-soft-xs text-white"
+          className="flex space-x-2 text-5xl px-4 py-3 mr-3 font-bold text-center uppercase align-middle transition-all bg-transparent border rounded-lg cursor-pointer border-white leading-pro ease-soft-in tracking-tight-soft shadow-soft-md bg-150 bg-x-25 hover:scale-105 active:opacity-85 hover:shadow-soft-xs text-white"
         >
           <BsCalendarEvent/>
           <p>EVENTS</p>
