@@ -1,7 +1,6 @@
 import React from 'react';
 import { ParallaxBanner } from "react-scroll-parallax";
 import { BannerLayer } from "react-scroll-parallax/dist/components/ParallaxBanner/types";
-import { BsCalendarEvent } from "react-icons/all";
 import eventBackground from "../../../../assets/event-background.jpg";
 
 const ParallaxEvents = () => {
@@ -23,7 +22,6 @@ const ParallaxEvents = () => {
           type="button"
           className="flex space-x-2 text-5xl px-4 py-3 mr-3 font-bold text-center uppercase align-middle transition-all bg-transparent border rounded-lg cursor-pointer border-white leading-pro ease-soft-in tracking-tight-soft shadow-soft-md bg-150 bg-x-25 hover:scale-105 active:opacity-85 hover:shadow-soft-xs text-white"
         >
-          <BsCalendarEvent/>
           <p>EVENTS</p>
         </button>
       </div>

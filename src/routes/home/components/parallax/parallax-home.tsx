@@ -1,22 +1,24 @@
 import React from 'react';
 import { BannerLayer } from "react-scroll-parallax/dist/components/ParallaxBanner/types";
-import bannerBackground from "../../../../assets/banner-background.jpg";
-import bannerForeground from "../../../../assets/banner-foreground.png";
+import bannerBackground from "../../../../assets/background.png";
+import bannerForeground from "../../../../assets/buddha.png";
 import { ParallaxBanner } from "react-scroll-parallax";
 
 const ParallaxHome = () => {
   const background: BannerLayer = {
     image: bannerBackground,
-    translateY: [0, 50],
-    opacity: [1, 0.3],
+    translateY: [0, 60],
+    opacity: [1, 0.7],
     scale: [1.05, 1, 'easeOutCubic'],
     shouldAlwaysCompleteAnimation: true,
   }
 
   const foreground: BannerLayer = {
+    translateX: [40, 40],
     image: bannerForeground,
-    translateY: [10, 30],
-    scale: [1, 1.1, 'easeOutCubic'],
+    translateY: [22, 35],
+    opacity: [1, 0.7],
+    scale: [0.3, 0.2, 'easeOutCubic'],
     shouldAlwaysCompleteAnimation: true,
   }
 
@@ -47,12 +49,10 @@ const ParallaxHome = () => {
   }
 
   return (
-    <div className="h-[100vh]">
-      <ParallaxBanner
-        layers={[background, headline, foreground, gradientOverlay]}
-        className="h-full"
-      />
-    </div>
+    <ParallaxBanner
+      layers={[background, headline, foreground, gradientOverlay]}
+      className="h-[100vh]"
+    />
   )
 };
 

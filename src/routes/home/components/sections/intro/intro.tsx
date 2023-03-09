@@ -1,8 +1,7 @@
 import React from 'react';
-import { useInView } from "react-intersection-observer";
 import pawit1 from '../../../../../assets/pawit.jpg';
 import pawit2 from '../../../../../assets/pawit2.jpg';
-import CornerBorder from "../../../../../global/corner-border/corner-border";
+import CustomBorder from "../../../../../global/corner-border/custom-border";
 import { IntersectionObserver } from "../../../../../functions/observer/intersection-observer";
 
 const Intro = () => {
@@ -14,7 +13,7 @@ const Intro = () => {
   const [refIntroImage2, inViewIntroImage2] = IntersectionObserver(0.2);
 
   const inViewOpacity = (isInView: boolean): string => {
-    return `transition-opacity duration-1000 ${isInView ? 'opacity-1' : 'opacity-0'}`
+    return `transition-all duration-1000 ${isInView ? 'opacity-1' : 'opacity-0 translate-y-4'}`;
   }
 
   return (
@@ -27,32 +26,26 @@ const Intro = () => {
         Introduction
       </h1>
 
-      <CornerBorder
-        className={`md:text-2xl md:flex md:space-x-2 md:w-2/3 p-2 ${inViewOpacity(inViewIntroImage)}`}
-      >
-        <div className={`flex justify-center md:min-w-[200px] md:max-h-[200px] ${inViewOpacity(inViewIntroImage)}`}
-             ref={refIntroImage}>
+      <CustomBorder className={`md:text-2xl md:flex md:space-x-2 md:w-2/3 p-2 ${inViewOpacity(inViewIntroImage)}`}>
+        <div
+          className={`flex justify-center md:min-w-[200px] md:max-h-[200px] ${inViewOpacity(inViewIntroImage)}`}
+          ref={refIntroImage}
+        >
           <img src={pawit1} width="auto" height="auto"/>
         </div>
 
         <span>
           <p ref={refIntroText1} className={`${inViewOpacity(inViewIntroText1)}`}>
-            Pawit had always been a solitary figure, even as a child. He struggled to connect with others, finding it
-            difficult to make friends or engage in meaningful conversation. As he grew older, his isolation only
-            intensified. He spent long hours alone, lost in his thoughts and disconnected from the world around him.
+            Pawit was a man like no other. He had achieved a level of loneliness that no one else in the world could even fathom. He had no friends, no family, no pets, not even a houseplant to keep him company. It wasn't that he didn't want any of those things, he just couldn't seem to make any of them stick.
           </p>
           <br/>
           <p ref={refIntroText2} className={`${inViewOpacity(inViewIntroText2)}`}>
-            Despite his best efforts to break free from his loneliness, Pawit found himself increasingly isolated as the
-            years went by. He tried to reach out to others, but his attempts were met with rejection or indifference. He
-            watched as those around him formed close bonds and built happy lives, while he remained on the outside
-            looking
-            in.
+            He tried everything from online dating to befriending stray cats, but nothing seemed to work. His phone never rang, his email inbox remained empty, and the only time he ever heard his own voice was when he talked to himself in the mirror. Pawit was truly the loneliest man in the world, and as strange as it may sound, he was quite content with his solitude.
           </p>
         </span>
-      </CornerBorder>
+      </CustomBorder>
 
-      <CornerBorder
+      <CustomBorder
         className={`md:text-2xl md:flex md:space-x-2 md:w-2/3 md:self-end md:border-black md:border-2 rounded-xl p-2 ${inViewOpacity(inViewIntroText3)}`}>
         <span>
           <p ref={refIntroText3} className={`${inViewOpacity(inViewIntroText3)}`}>
@@ -69,7 +62,7 @@ const Intro = () => {
              ref={refIntroImage2}>
           <img src={pawit2} width="auto" height="auto"/>
         </div>
-      </CornerBorder>
+      </CustomBorder>
 
     </div>
   )
