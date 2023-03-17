@@ -3,7 +3,7 @@ import {
   AiOutlineBulb,
   AiOutlineHome,
   AiOutlineShopping,
-  BsCalendarEvent
+  BsCalendarEvent, BsPeople
 } from "react-icons/all";
 
 interface NavMenu {
@@ -19,14 +19,19 @@ const navMenu: NavMenu[] = [
     icon: <AiOutlineHome/>
   },
   {
+    text: 'Philosophy',
+    path: '/',
+    icon: <AiOutlineBulb/>
+  },
+  {
+    text: 'Staff',
+    path: '/',
+    icon: <BsPeople/>
+  },
+  {
     text: 'Events',
     path: '/',
     icon: <BsCalendarEvent/>
-  },
-  {
-    text: 'Learn',
-    path: '/',
-    icon: <AiOutlineBulb/>
   },
   {
     text: 'Shop',
