@@ -3,11 +3,9 @@ module.exports = {
     content: ["./src/**/*.{html,js,ts,tsx}"], theme: {
         extend: {
             animation: {
-                'fadeIn-1s': 'fadeIn 1s forwards',
-                'fadeIn-1.5s': 'fadeIn 1.5s forwards',
-                'fadeIn-2s': 'fadeIn 2s forwards',
-                'fadeIn-2.5s': 'fadeIn 2.5s forwards',
-                'fadeIn-3s': 'fadeIn 3s forwards',
+                'fadeIn': 'fadeIn 1s forwards',
+                'fadeIn-0.5s': 'fadeIn 1s 0.5s forwards',
+                'fadeIn-1s': 'fadeIn 1s 1s forwards'
             },
             keyframes: {
                 fadeIn: {

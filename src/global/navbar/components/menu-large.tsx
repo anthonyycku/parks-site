@@ -7,8 +7,12 @@ import logo from '../../../assets/logo.png';
 const MenuLarge = () => {
   return (
     <>
-      <Link to="/" className="absolute">
+      <Link to="/" className="absolute flex items-center space-x-2">
         <img src={logo} width={80}/>
+        <span>
+          <p>Yuthok Medicine</p>
+          <p>Buddha Temple</p>
+        </span>
       </Link>
 
       <div className="flex items-center justify-between text-3xl w-1/2 ">

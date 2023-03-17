@@ -17,13 +17,13 @@ const ParallaxHome = () => {
     expanded: false,
     children: (
       <div className="absolute inset-0 flex items-center justify-center flex-col">
-        <h1 className="animate-fadeIn-1s px-4 md:px-0 text-4xl md:text-6xl text-white font-thin">
+        <h1 className="animate-fadeIn px-4 md:px-0 text-4xl md:text-6xl text-white font-thin">
           A GLIMPSE
         </h1>
-        <h1 className="animate-fadeIn-2s px-4 md:px-0 text-4xl md:text-6xl text-white font-thin">
+        <h1 className="animate-fadeIn-0.5s opacity-0 px-4 md:px-0 text-4xl md:text-6xl text-white font-thin">
           INTO THE HEART OF
         </h1>
-        <h1 className="animate-fadeIn-3s px-4 md:px-0 text-6xl md:text-8xl text-white font-bold">
+        <h1 className="animate-fadeIn-1s opacity-0 px-4 md:px-0 text-6xl md:text-8xl text-white font-bold">
           THAILAND
         </h1>
       </div>
