@@ -9,13 +9,13 @@ const Home = () => {
     <>
       <ParallaxHome/>
 
-      <div className="flex flex-col p-2">
+      <div className="flex flex-col">
         <Intro/>
       </div>
 
       <ParallaxEvents/>
 
-      <div className="flex flex-col p-2">
+      <div className="flex flex-col">
         <Intro/>
       </div>
     </>

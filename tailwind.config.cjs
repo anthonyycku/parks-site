@@ -14,7 +14,9 @@ module.exports = {
                 }
             },
             colors: {
-                hoverColor: '#99f6e4'
+                hoverColor: '#f2f230',
+                primary: '#949398FF',
+                secondary: '#F4DF4EFF'
             }
         },
     }, plugins: [],

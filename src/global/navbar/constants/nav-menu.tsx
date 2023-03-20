@@ -13,22 +13,22 @@ interface NavMenu {
 
 const navMenu: NavMenu[] = [
   {
-    text: 'Philosophy',
+    text: 'ABOUT',
     path: '/',
     icon: <AiOutlineBulb/>
   },
   {
-    text: 'Staff',
+    text: 'STAFF',
     path: '/',
     icon: <BsPeople/>
   },
   {
-    text: 'Events',
+    text: 'EVENTS',
     path: '/',
     icon: <BsCalendarEvent/>
   },
   {
-    text: 'Shop',
+    text: 'SHOP',
     path: '/',
     icon: <AiOutlineShopping/>
   },
