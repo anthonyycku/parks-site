@@ -16,7 +16,7 @@ const Intro = () => {
   }
 
   return (
-    <div className="relative flex flex-col w-full">
+    <div className="relative flex flex-col w-5/6 lg:w-3/5 max-w-[1500px]">
 
       <div className={`md:text-2xl md:space-x-2 flex flex-col ${inViewOpacity(inViewIntroImage)}`}>
         <h1 ref={refIntro} className={`text-center text-4xl md:text-6xl ${inViewOpacity(inViewIntro)}`}>

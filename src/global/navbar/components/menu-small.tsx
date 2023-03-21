@@ -30,10 +30,6 @@ const MenuSmall = () => {
 
   return (
     <>
-      <Link to="/" className="absolute left-1/2 transform -translate-x-1/2">
-        <img src={logo} width={80}/>
-      </Link>
-
       <div className={`relative`} ref={menuRef}>
 
         <div

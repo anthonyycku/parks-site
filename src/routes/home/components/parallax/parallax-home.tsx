@@ -16,7 +16,7 @@ const ParallaxHome = () => {
     shouldAlwaysCompleteAnimation: true,
     expanded: false,
     children: (
-      <div className="absolute inset-0 flex items-center justify-center flex-col">
+      <div className="absolute top-[300px] right-[300px] flex items-center justify-center flex-col">
         <h1 className="animate-fadeIn px-4 md:px-0 text-4xl md:text-6xl text-white font-thin">
           A GLIMPSE
         </h1>
@@ -42,7 +42,7 @@ const ParallaxHome = () => {
   return (
     <ParallaxBanner
       layers={[background, headline, gradientOverlay]}
-      className="h-[100vh]"
+      className="h-[100vh] md:h-[1200px]"
     />
   )
 };

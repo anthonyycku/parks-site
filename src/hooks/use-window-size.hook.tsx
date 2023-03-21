@@ -5,7 +5,7 @@ const UseWindowSizeHook = () => {
   const [isDesktop, setIsDesktop] = useState(true);
 
   const handleResize = () => {
-    setIsDesktop(window.innerWidth > MOBILE_WIDTH);
+    setIsDesktop(window.innerWidth >= MOBILE_WIDTH);
   }
 
   useEffect(() => {

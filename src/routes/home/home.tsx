@@ -9,7 +9,7 @@ const Home = () => {
     <>
       <ParallaxHome/>
 
-      <div className="flex flex-col">
+      <div className="flex justify-center">
         <Intro/>
       </div>
 

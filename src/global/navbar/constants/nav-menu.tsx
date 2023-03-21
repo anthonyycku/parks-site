@@ -8,17 +8,32 @@ import {
 interface NavMenu {
   text: string;
   path: string;
-  icon?: ReactNode
+  icon?: ReactNode;
 }
+
+export const aboutMenu: NavMenu[] = [
+  {
+    text: 'PHILOSOPHY',
+    path: '/'
+  },
+  {
+    text: 'PRACTITIONERS',
+    path: '/'
+  },
+  {
+    text: 'TESTIMONIALS',
+    path: '/'
+  }
+]
 
 const navMenu: NavMenu[] = [
   {
     text: 'ABOUT',
     path: '/',
-    icon: <AiOutlineBulb/>
+    icon: <AiOutlineBulb/>,
   },
   {
-    text: 'STAFF',
+    text: 'GALLERY',
     path: '/',
     icon: <BsPeople/>
   },
@@ -32,6 +47,10 @@ const navMenu: NavMenu[] = [
     path: '/',
     icon: <AiOutlineShopping/>
   },
+  {
+    text: 'CONTACT',
+    path: '/'
+  }
 ];
 
 export default navMenu;
